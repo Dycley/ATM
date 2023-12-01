@@ -1,24 +1,24 @@
 public class Account {
-    private int Banlance;
-    private int Deposit;
-    private int Withdraw;
-    private int TransferAmount;
-    private  int Money;//钞箱金额；
-    private char Password;
-    private char UserID;
- public Account(int Banlance,int Deposit,int Withdraw,int TransferAmount,char Password,char UserID,int Money)
+    private int banlance;
+    private int deposit;
+    private int withdraw;
+    private int transferAmount;
+    private  int money;//钞箱金额；
+    private char password;
+    private char userID;
+ public Account(int banlance,int deposit,int withdraw,int transferAmount,char password,char userID,int money)
     {
-        this.Banlance=Banlance;
-        this.Deposit=Deposit;
-        this.Withdraw=Withdraw;
-        this.TransferAmount=TransferAmount;
-        this.Password=Password;
-        this.UserID=UserID;
-        this.Money=Money;
+        this.banlance=banlance;
+        this.deposit=deposit;
+        this.withdraw=withdraw;
+        this.transferAmount=transferAmount;
+        this.password=password;
+        this.userID=userID;
+        this.money=money;
     }
-    public int GetBanlance()
+    public int getBanlance()
     {
-        return Banlance;
+        return banlance;
     }
     public boolean Signin(char P)
     {
@@ -27,16 +27,16 @@ public class Account {
     }
     public void DepositMoney(int d)
     {
-        Money+=d;
-        Banlance+=d;//参数是存款金额
+        money+=d;
+        banlance+=d;//参数是存款金额
 
     }
     public void WithdrawMoney(int w)
     {
-        if((Banlance>=w)&&(Money>=w))
-        {Banlance-=w;
+        if((banlance>=w)&&(money>=w))
+        {banlance-=w;
         System.out.println("请取走您的钞票");}
-        else if(Banlance<w) {
+        else if(banlance<w) {
             System.out.println("余额不足，取款失败");
         }
         else System.out.println("钞箱钞票不足，取款失败");
