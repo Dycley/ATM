@@ -5,15 +5,15 @@ public class Account {
     private int transferAmount;
     private  int money;//钞箱金额；
     private char password;
-    private char userID;
- public Account(int banlance,int deposit,int withdraw,int transferAmount,char password,char userID,int money)
+    private char cardID;
+    public Account(int banlance,int deposit,int withdraw,int transferAmount,char password,char cardID,int money)
     {
         this.banlance=banlance;
         this.deposit=deposit;
         this.withdraw=withdraw;
         this.transferAmount=transferAmount;
         this.password=password;
-        this.userID=userID;
+        this.cardID =cardID;
         this.money=money;
     }
     public int getBanlance()
