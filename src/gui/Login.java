@@ -30,7 +30,7 @@ public class Login extends JFrame {
 		panelOne.setOpaque(false);            //组件设置为透明;
 
 		((JPanel)this.getContentPane()).setOpaque(false);
-		ImageIcon img = new ImageIcon("E:/atm2/src/gui/j.jpg"); //添加图片
+		ImageIcon img = new ImageIcon("./src/gui/j.jpg"); //添加图片
 		JLabel background = new  JLabel(img);
 		this.getLayeredPane().add(background, new Integer(Integer.MIN_VALUE));
 		background.setBounds(0, 0, img.getIconWidth(), img.getIconHeight());
