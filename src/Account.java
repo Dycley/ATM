@@ -24,6 +24,7 @@ public class Account {
     {
         //参数是密码
         //判断输入的密码与数据库内存的密码是否相同
+        return false;
     }
     public void DepositMoney(int d)
     {
