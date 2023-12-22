@@ -82,27 +82,17 @@ public class Login extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//注册监听
 		btOk.addActionListener(new ActionListener(){
-
-			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
- 				String account=tfAccount.getText();
-				String pwd=new String(tfPwd.getPassword());
-				CardArray.getCardList();
-				Iterator<Card> it=CardArray.getCardList().iterator();
-				//和集合中的合法数据进行匹配
-				while(it.hasNext()){
-					currCard=it.next();//保存当前账户
-					if(account.equals(currCard.getCardID())){
-						System.out.println("ok");
-						break;
-					}
-				}
-				if(currCard==null){
+ 				String account=tfAccount.getText();					// 获取账号
+				String pwd=new String(tfPwd.getPassword());			// 获取输入密码
+
+				currCard = new Card(account);
+				if(!currCard.exist()){
 					JOptionPane.showMessageDialog(Login.this, "对不起，您的账号有误!");
 					currCard=null;
 					tfAccount.setText("");
-				}else if(pwd.equals(currCard.getPassWord())){
+				}else if(currCard.judgePwd(pwd)){
 							Login.this.dispose();
 							new MainFrame(currCard).init();
 				}else{
@@ -116,7 +106,36 @@ public class Login extends JFrame {
 								System.exit(0);
 						}
 					}
-				}			
+
+//				CardArray.getCardList();
+//				Iterator<Card> it=CardArray.getCardList().iterator();
+//				//和集合中的合法数据进行匹配
+//				while(it.hasNext()){
+//					currCard=it.next();//保存当前账户
+//					if(account.equals(currCard.getCardID())){
+//						System.out.println("ok");
+//						break;
+//					}
+//				}
+//				if(currCard==null){
+//					JOptionPane.showMessageDialog(Login.this, "对不起，您的账号有误!");
+//					currCard=null;
+//					tfAccount.setText("");
+//				}else if(pwd.equals(currCard.getPassWord())){
+//							Login.this.dispose();
+//							new MainFrame(currCard).init();
+//				}else{
+//							JOptionPane.showMessageDialog(Login.this, "对不起，您的密码有误，请重新输入！您还有"+(2-count)+"次机会");
+//							count++;
+//							if(count==3){
+//								JOptionPane.showMessageDialog(Login.this, "您的密码三次错误，已吞卡！");
+//
+//								tfAccount.setText("");
+//								tfPwd.setText("");
+//								System.exit(0);
+//						}
+//					}
+				}
 		});
 	}
 	public static void main(String[] args) {

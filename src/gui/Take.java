@@ -164,18 +164,18 @@ public class Take extends JFrame implements ActionListener{
 			tfMoney.setText(tfMoney.getText()+arg0.getActionCommand());
 		}else if(arg0.getSource()==btOk){
 			int money=Integer.parseInt(tfMoney.getText());
-			if(currCard.getBanlance()<money){
+			if(currCard.getBalance()<money){
 				JOptionPane.showMessageDialog(Take.this, "对不起，您的余额不足！");
 				tfMoney.setText("");
 			}
 			else{
 				//当前登录账号更新
-				currCard.setBanlance(currCard.getBanlance()-money);
+				currCard.setBanlance(currCard.getBalance()-money);
 				
 				//集合数据更新
-				int i=CardArray.getCardList().indexOf(currCard);
-				CardArray.getCardList().set(i, currCard);
-				JOptionPane.showMessageDialog(null, "恭喜你成功取款"+money+"元\n当前账户余额为："+currCard.getBanlance());
+//				int i=CardArray.getCardList().indexOf(currCard);
+//				CardArray.getCardList().set(i, currCard);
+				JOptionPane.showMessageDialog(null, "恭喜你成功取款"+money+"元\n当前账户余额为："+currCard.getBalance());
 				tfMoney.setText("");
 			}
 		}else if(arg0.getSource()==btCancel){

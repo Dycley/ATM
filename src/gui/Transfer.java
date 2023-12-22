@@ -4,6 +4,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import javax.swing.*;
 
@@ -61,30 +62,33 @@ public class Transfer extends JFrame implements ActionListener{
 		int money;
 		money=Integer.parseInt(tf2.getText());
 		String in = tf1.getText();
-		if(in.length()!=3) {
-			JOptionPane.showMessageDialog(Transfer.this, "对不起，请输入3位账号数字！");
-		} else if (!in.equals("111")&&!in.equals("222")&&!in.equals("333")) {
-			JOptionPane.showMessageDialog(Transfer.this, "对不起，请输入生效的账号！");
+		Card c=new Card(in);
+//		if(in.length()!=3) {
+//			JOptionPane.showMessageDialog(Transfer.this, "对不起，请输入3位账号数字！");
+//		} else
+			if (!c.exist()&& !Objects.equals(in, currCard.getCardID())) {
+			JOptionPane.showMessageDialog(Transfer.this, "请输入正确的账号");
+			c=null;
 		} else {
-			int j;
-			Card c = null;
-			ArrayList<Card> listin = CardArray.getCardList();
-			for (j = 0; j < listin.size(); j++) {
-				c = listin.get(j);
-				if (c.getCardID().equals(in)) {
-					break;
-				}
-			}
-			c.setBanlance(c.getBanlance() + money);
-			CardArray.getCardList().set(j, c);
+//			int j;
+//			Card c = null;
+//			ArrayList<Card> listin = CardArray.getCardList();
+//			for (j = 0; j < listin.size(); j++) {
+//				c = listin.get(j);
+//				if (c.getCardID().equals(in)) {
+//					break;
+//				}
+//			}
+			c.setBanlance(c.getBalance() + money);
+//			CardArray.getCardList().set(j, c);
 
-			System.out.println(c.getBanlance());
+			System.out.println(c.getBalance());
 
-			if(currCard.getBanlance()>money){
-				currCard.setBanlance(currCard.getBanlance()-money);
-				JOptionPane.showMessageDialog(null, "恭喜你成功转账"+money+"元\n当前账户余额为："+currCard.getBanlance());
+			if(currCard.getBalance()>money){
+				currCard.setBanlance(currCard.getBalance()-money);
+				JOptionPane.showMessageDialog(null, "恭喜你成功转账"+money+"元\n当前账户余额为："+currCard.getBalance());
 			}
-			if(currCard.getBanlance()<money){
+			if(currCard.getBalance()<money){
 				JOptionPane.showMessageDialog(Transfer.this, "对不起，您的余额不足！");
 			}
 		}

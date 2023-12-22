@@ -65,8 +65,8 @@ public class ModiPwd extends JFrame implements ActionListener{
  		String pwd1=new String(tf1.getPassword());
 		String pwd2=new String(tf2.getPassword());
 		String pwd3=new String(tf3.getPassword());
-		CardArray.getCardList();
-		Iterator<Card> it=CardArray.getCardList().iterator();
+//		CardArray.getCardList();
+//		Iterator<Card> it=CardArray.getCardList().iterator();
 
 		
 		if(!pwd1.equals(currCard.getPassWord())){
@@ -76,8 +76,8 @@ public class ModiPwd extends JFrame implements ActionListener{
 		}else if(!pwd3.equals(pwd2)){
 			JOptionPane.showMessageDialog(ModiPwd.this, "两次填写的密码不一致，请重新输入！");
 		}else{
-			JOptionPane.showMessageDialog(ModiPwd.this, "密码修改成功！");
 			currCard.setPassWord(pwd2);
+			JOptionPane.showMessageDialog(ModiPwd.this, "密码修改成功！");
 		}
 	}
 

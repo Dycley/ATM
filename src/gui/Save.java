@@ -55,8 +55,8 @@ public class Save extends JFrame implements ActionListener{
 		int money=0;
 		System.out.println(tf2.getText());
 		money=Integer.parseInt((tf2.getText()==""||tf2.getText()==null)?"0":tf2.getText());
-		currCard.setBanlance(currCard.getBanlance()+money);
-		JOptionPane.showMessageDialog(null, "恭喜你成功存款"+money+"元\n当前账户余额为："+currCard.getBanlance());
+		currCard.setBanlance(currCard.getBalance()+money);
+		JOptionPane.showMessageDialog(null, "恭喜你成功存款"+money+"元\n当前账户余额为："+currCard.getBalance());
 		
 	}
 }
