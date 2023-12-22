@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d7e5eb9-5c39-4fed-9e38-01c9ae307c68" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ATM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myatmdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/myatmdb.sql" afterDir="false" />
+    <list default="true" id="5d7e5eb9-5c39-4fed-9e38-01c9ae307c68" name="更改" comment=".">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comm/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comm/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ModiPwd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ModiPwd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Take.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Take.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Transfer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +94,19 @@
     </key>
   </component>
   <component name="RunManager" selected="应用程序.Login">
+    <configuration name="DBConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="comm.DBConfig" />
+      <module name="ATM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DBLoad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DBLoad" />
       <module name="ATM" />
@@ -123,24 +141,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="comm.DBLoad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="comm.DBLoad" />
-      <module name="ATM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="comm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Login" />
         <item itemvalue="应用程序.Test" />
-        <item itemvalue="应用程序.comm.DBLoad" />
+        <item itemvalue="应用程序.DBConfig" />
         <item itemvalue="应用程序.DBLoad" />
         <item itemvalue="应用程序.User" />
       </list>
@@ -160,6 +165,7 @@
       <workItem from="1702620517363" duration="12705000" />
       <workItem from="1702636421697" duration="2368000" />
       <workItem from="1703139025213" duration="2486000" />
+      <workItem from="1703224577325" duration="7545000" />
     </task>
     <task id="LOCAL-00001" summary="更改项目结构">
       <option name="closed" value="true" />
@@ -193,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702630106339</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".">
+      <option name="closed" value="true" />
+      <created>1703224693273</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703224693273</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

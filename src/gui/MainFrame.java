@@ -89,7 +89,7 @@ public class MainFrame extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				JOptionPane.showMessageDialog(MainFrame.this, "您当前账户余额为："+currCard.getBanlance());
+				JOptionPane.showMessageDialog(MainFrame.this, "您当前账户余额为："+currCard.getBalance());
 			}
 			
 		});

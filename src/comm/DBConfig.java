@@ -1,10 +1,9 @@
 package comm;
 
 import java.io.*;
-import java.sql.*;
 import java.util.Properties;
 
-public class DBLoad {
+public class DBConfig {
     static String JDBC_DRIVER ;
     static String DB_URL;
 
@@ -20,7 +19,7 @@ public class DBLoad {
         }
     }
 
-    public DBLoad() throws IOException {
+    public DBConfig() throws IOException {
     }
 
     public static void load_config() throws IOException{
